@@ -56,6 +56,7 @@ const BookInputModal = ({ visible, onClose, onSubmit, book, isEdit }) => {
 		<>
 			<StatusBar hidden />
 			<Modal visible={visible} animationType='fade'>
+				<Text style={styles.header}> {isEdit ? 'Edit Book' : 'Add New Book'} </Text>
 				<View style={styles.container}>
 					<TextInput
 						value={title}
@@ -98,6 +99,14 @@ const styles = StyleSheet.create({
 	container: {
 		paddingHorizontal: 20,
 		paddingTop: 15,
+	},
+	header: {
+		paddingHorizontal: 15,
+		paddingTop: 15,
+		marginTop: 10,
+		fontSize: 20,
+		fontWeight: 'bold',
+		color: colors.PRIMARY
 	},
 	input: {
 		borderBottomWidth: 2,

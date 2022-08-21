@@ -13,8 +13,8 @@ const formatDate = ms => {
 	const month = date.getMonth() + 1;
 	const year = date.getFullYear();
 	const hrs = date.getHours();
-	const min = date.getMinutes();
-	const sec = date.getSeconds();
+	const min = (date.getMinutes() < 10) ? `0${date.getMinutes()}` : date.getMinutes();
+	const sec = (date.getSeconds()< 10) ? `0${date.getSeconds()}` : date.getSeconds();
 
 	return `${day}/${month}/${year} - ${hrs}:${min}:${sec}`;
 };
